@@ -1,0 +1,112 @@
+body {
+  margin: 0;
+}
+
+html {
+  overflow: hidden;
+}
+
+#sky {  
+  position: absolute;
+  width: 100%;
+  height: 50%;
+  background: lightblue;
+  animation: sky 10s;
+}
+
+#sea {
+  position: absolute;
+  width: 100%;
+  height: 50%;
+  bottom: 0;
+  background: blue;
+   animation: sea 10s;
+}
+#boat{
+   height:100px;
+   position: absolute;
+  top :40;
+  left: 0%;
+  animation:boatsail 30s infinite;
+}
+#sun {
+  height:180px;
+  position: absolute;
+  top :0;
+  left: 40%;
+  animation: sunrise 10s infinite;
+}
+#cloud1 {
+   position: absolute;
+   height: 80px;
+   top :20px;
+  left: 30%;
+  animation: fade 10s;
+}
+#cloud2{
+   position: absolute;
+   height: 80px;
+   top :25px;
+  left: 40%;
+   animation: fade 10s infinite;
+}
+#cloud3{
+   position: absolute;
+   height: 90px;
+   top :2px;
+  left: 80%;
+   animation: fade2 10s infinite;
+}
+@keyframes sunrise {
+    0%   {top:90%; left:0;}
+    33%  {top:0; left:40%; }
+    66%  {top:0; left:40%; }
+    100% {top:100%; left:80%; }
+}
+
+@keyframes sky {
+     0% {background: black}
+     5%  {background: tomato}
+     15%  {background: orange}
+      
+     30%   {background: lightblue}
+     66%   {background: lightblue}
+     
+     90%  {background: orange}
+     95%  {background: tomato} 
+    100% {background: black}
+}
+
+@keyframes boatsail {
+    0%   {  left:-50;}
+    100% {  left:200%; }
+}
+
+@keyframes sea {
+     0% {background: black}
+     5%  {background: darkblue}
+     15%  {background: midnightblue}
+      
+     30%   {background: blue}
+     66%   {background: blue}
+     
+     90%  {background: midnightblue}
+     95%  {background: darkblue} 
+    100% {background: black}
+}
+
+
+@keyframes fade {
+  0%   {opacity: 100;}
+  20%  {opacity: 50;}
+  33%  {opacity: 0;}
+  100%   {opacity: 0;}
+}
+
+
+@keyframes fade2 {
+  0%   {opacity: 100;}
+   
+  50%  {opacity: 50;}
+  100%   {opacity: 0;}
+}
